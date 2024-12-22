@@ -1,4 +1,5 @@
 import { USERS } from "@/consts"
+import { getUsernameFromTg } from "@/utils"
 import { Link } from "react-router-dom"
 
 export const Users = () => {
@@ -6,7 +7,7 @@ export const Users = () => {
         <ul className="flex flex-col">
             {USERS.map((user) => (
                 <li
-                    key={user.id}
+                    key={user.tg}
                     className="flex items-center justify-between py-4 hover:bg-gray-900 px-4 transition-colors gap-4 border-b border-red-900 border-b-2"
                 >
                     <div className="flex items-center gap-4">
@@ -18,7 +19,7 @@ export const Users = () => {
                             <p className="text-sm text-white">{user.role}</p>
                         </div>
                     </div>
-                    <button className="z-10 px-4 py-2 bg-red-900 text-white font-bold rounded-lg text-sm"><Link to={`/users/${user.username}`}>See more</Link></button>
+                    <button className="z-10 px-4 py-2 bg-red-900 text-white font-bold rounded-lg text-sm"><Link to={`/users/${getUsernameFromTg(user.tg)}`}>See more</Link></button>
                 </li>
             ))}
         </ul>

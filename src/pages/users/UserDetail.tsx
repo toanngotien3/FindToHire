@@ -1,4 +1,5 @@
 import { USERS } from "@/consts";
+import { getTgFromUsername } from "@/utils";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
@@ -6,8 +7,9 @@ import { useParams } from "react-router-dom";
 
 export const UserDetail = () => {
     const { username } = useParams();
+    const tg_from_params = getTgFromUsername(username || "")
 
-    const user = USERS.find(user => user.username === username)
+    const user = USERS.find(user => user.tg === tg_from_params)
 
     return <div className="bg-black text-white h-app">
         <div className="container mx-auto px-4 py-8">
@@ -60,7 +62,7 @@ export const UserDetail = () => {
                 <div className="space-y-6 mt-20 mb-4">
                     <h1 className="text-3xl font-bold text-center">{user?.name}</h1>
                     <p className="text-gray-400 text-md leading-relaxed max-w-3xl mx-auto text-center">
-                        {user?.detail}
+                        {user?.description}
                     </p>
 
                     {/* Additional project details can be added here */}

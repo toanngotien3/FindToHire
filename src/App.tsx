@@ -1,7 +1,7 @@
 import './App.scss'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/layout';
-import { Home } from './pages';
+import { Home, Request } from './pages';
 import { UserDetail, Users } from './pages/users';
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="users" element={<Users />} />
         <Route path="/users/:username" element={<UserDetail />} />
-      </Route>
+        <Route path="/request" element={<Request />} />
+        </Route>
     </Routes>
   </Router>
 }
