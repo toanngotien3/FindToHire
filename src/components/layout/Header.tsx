@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <header className="bg-red-900 text-white p-4">
             <div className="flex justify-between items-center">
-                <h1 className="text-xl font-bold">FindMe</h1>
+                <h1 className="text-xl font-bold uppercase">FindToHire</h1>
                 <button onClick={toggleMenu}>
                     {menuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
                 </button>
