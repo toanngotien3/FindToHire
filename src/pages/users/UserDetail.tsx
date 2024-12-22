@@ -14,7 +14,7 @@ export const UserDetail = () => {
             <div className="flex flex-col justify-center">
                 <div className="relative">
                     {/* Main image */}
-                    <div className="w-full h-[200px] rounded-xl overflow-hidden mb-8">
+                    <div className="w-full h-[160px] rounded-xl overflow-hidden mb-8">
                         <img
                             src={user?.banner}
                             alt="Project Banner"
@@ -58,8 +58,8 @@ export const UserDetail = () => {
                 </div>
 
                 <div className="space-y-6 mt-20 mb-4">
-                    <h1 className="text-4xl font-bold text-center">{user?.name}</h1>
-                    <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto text-center">
+                    <h1 className="text-3xl font-bold text-center">{user?.name}</h1>
+                    <p className="text-gray-400 text-md leading-relaxed max-w-3xl mx-auto text-center">
                         {user?.detail}
                     </p>
 
