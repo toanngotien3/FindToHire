@@ -2,7 +2,7 @@ import { USERS } from "@/consts"
 import { Link } from "react-router-dom"
 
 export const Users = () => {
-    return <div className="w-full max-w-3xl mx-auto p-4">
+    return <div className="w-full mx-auto p-4">
         <ul className="divide-y divide-gray-200">
             {USERS.map((user) => (
                 <li
@@ -11,11 +11,11 @@ export const Users = () => {
                 >
                     <div className="flex items-center gap-4">
                         <div className="h-12 w-12 rounded-full overflow-hidden">
-                            <img src={user.imageUrl} alt={user.name} />
+                            <img src={user.logo} alt={user.name} />
                         </div>
                         <div>
                             <h3 className="text-sm font-semibold text-gray-900">{user.name}</h3>
-                            <p className="text-sm text-gray-500">{user.position}</p>
+                            <p className="text-sm text-gray-500">{user.role}</p>
                         </div>
                     </div>
                     <button className="z-10 px-4 py-2 bg-red-900 text-white font-bold rounded-lg text-sm"><Link to={`/users/${user.username}`}>See more</Link></button>
