@@ -1,5 +1,7 @@
-#home{
-    background-image: url('assets/memes.webp');
-  background-image: -webkit-image-set(url('assets/memes.webp') 1x, url('assets/memes.png') 2x); // Safari fallback
-  background-image: image-set(url('assets/memes.webp') 1x, url('assets/memes.png') 2x); // Other browsers
+#home {
+  background-position: top center;
+  background-size: 100% auto;
+  background-image: url('assets/background.webp');
+  background-image: -webkit-image-set(url('assets/background.webp') 1x, url('assets/background.png') 2x); // Safari fallback
+  background-image: image-set(url('assets/background.webp') 1x, url('assets/background.png') 2x); // Other browsers
 }

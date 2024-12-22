@@ -2,7 +2,7 @@ import { USERS } from "@/consts"
 import { Link } from "react-router-dom"
 
 export const Users = () => {
-    return <div className="w-full mx-auto p-4">
+    return <div className="w-full mx-auto p-4 h-app">
         <ul className="divide-y divide-gray-200">
             {USERS.map((user) => (
                 <li
