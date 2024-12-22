@@ -1,0 +1,5 @@
+#home{
+    background-image: url('assets/memes.webp');
+  background-image: -webkit-image-set(url('assets/memes.webp') 1x, url('assets/memes.png') 2x); // Safari fallback
+  background-image: image-set(url('assets/memes.webp') 1x, url('assets/memes.png') 2x); // Other browsers
+}
