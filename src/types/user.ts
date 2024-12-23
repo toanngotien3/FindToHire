@@ -2,12 +2,11 @@ type RoleType = 'developer' | 'mod' | 'admin'
 type FilterByType = 'thumb-up' | 'exp' | 'country'
 
 export type UserType = {
-  name: string
+  tg: string
   role: string
   logo: string
   banner: string
   description: string
-  tg: string
   x: string
   site?: string
   exp: number
@@ -16,10 +15,9 @@ export type UserType = {
 }
 
 export type UserFormType = {
-  name: string
+  tg: string
   role: string
   detail: string
-  tg: string
   x: string
   site?: string
   exp: number
