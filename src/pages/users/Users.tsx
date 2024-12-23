@@ -24,11 +24,8 @@ export const Users = () => {
       </div>
       <ul className="flex flex-col">
         {USERS.map((user) => (
-          <Link to={`/users/${getUsernameFromTg(user.tg)}`}>
-            <li
-              key={user.tg}
-              className="flex items-center justify-between py-4 hover:bg-gray-900 px-4 transition-colors gap-4 border-red-900 border-b-2"
-            >
+          <Link key={user.tg} to={`/users/${getUsernameFromTg(user.tg)}`}>
+            <li className="flex items-center justify-between py-4 hover:bg-gray-900 px-4 transition-colors gap-4 border-red-900 border-b-2">
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden">
                   <img src={user.logo} alt={getUsernameFromTg(user.tg)} />
@@ -37,7 +34,9 @@ export const Users = () => {
                   <h3 className="text-sm font-semibold text-white">
                     {getUsernameFromTg(user.tg)}
                   </h3>
-                  <p className="text-sm text-white">{user.role}</p>
+                  <p className="text-sm font-bold capitalize text-yellow-400">
+                    {user.role}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
