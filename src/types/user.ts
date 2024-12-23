@@ -1,3 +1,5 @@
+import { RateType } from "./rate";
+
 export type UserType = {
     name: string;
     role: string;
@@ -9,6 +11,7 @@ export type UserType = {
     site?: string;
     exp: number;
     from?: string;
+    rate?: RateType
 }
 
 export type UserFormType = {

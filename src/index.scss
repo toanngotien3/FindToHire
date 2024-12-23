@@ -3,5 +3,35 @@
 @tailwind utilities;
 
 .h-app {
-    min-height: 600px;
+  min-height: 600px;
+}
+
+.label {
+  background: linear-gradient(to left, #ffeb00, #f9a201);
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: calc(100% + 10px);
+    left: -100%;
+    top: 50%;
+    opacity: 1;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.425), #ffffff6b);
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: shine 4s linear infinite;
+  }
+}
+
+@keyframes shine {
+  0%,
+  75%,
+  100% {
+    left: -100%;
+  }
+  25%,
+  50% {
+    left: calc(100% + 20%);
+  }
 }
