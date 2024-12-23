@@ -31,11 +31,11 @@ export const Users = () => {
             >
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden">
-                  <img src={user.logo} alt={user.name} />
+                  <img src={user.logo} alt={getUsernameFromTg(user.tg)} />
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-white">
-                    {user.name}
+                    {getUsernameFromTg(user.tg)}
                   </h3>
                   <p className="text-sm text-white">{user.role}</p>
                 </div>
