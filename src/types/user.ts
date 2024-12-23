@@ -1,9 +1,9 @@
-type RoleType = 'developer' | 'mod' | 'admin'
-type FilterByType = 'thumb-up' | 'exp' | 'country'
+type UserRoleType = 'developer' | 'mod' | 'admin' | 'kol'
+type UserFilterByType = 'thumb-up' | 'exp' | 'country'
 
 export type UserType = {
   tg: string
-  role: string
+  role: UserRoleType
   logo: string
   banner: string
   description: string
@@ -16,8 +16,8 @@ export type UserType = {
 
 export type UserFormType = {
   tg: string
-  role: string
-  detail: string
+  role: UserRoleType
+  description: string
   x: string
   site?: string
   exp: number
@@ -31,6 +31,6 @@ export type UserRateType = {
 
 export type UserFilterType = {
   tg: string
-  role: RoleType
-  filter_by: FilterByType
+  role: UserRoleType
+  filter_by: UserFilterByType
 }

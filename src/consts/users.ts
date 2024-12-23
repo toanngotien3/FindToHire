@@ -6,7 +6,7 @@ import UserImg4 from '@/assets/users/mym.jpg'
 // Sample user data
 export const USERS: UserType[] = [
   {
-    role: 'Senior Developer',
+    role: 'developer',
     logo: UserImg1,
     banner: UserImg1,
     description:
@@ -22,7 +22,7 @@ export const USERS: UserType[] = [
     },
   },
   {
-    role: 'Hype Guy',
+    role: 'mod',
     logo: UserImg2,
     banner: UserImg2,
     description:
@@ -37,7 +37,7 @@ export const USERS: UserType[] = [
     },
   },
   {
-    role: 'Gem',
+    role: 'kol',
     logo: UserImg3,
     banner: UserImg3,
     description:
@@ -52,7 +52,7 @@ export const USERS: UserType[] = [
     },
   },
   {
-    role: 'Admin',
+    role: 'admin',
     logo: UserImg4,
     banner: UserImg4,
     description:
