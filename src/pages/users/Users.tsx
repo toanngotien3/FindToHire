@@ -2,10 +2,26 @@ import { USERS } from '@/consts'
 import { getUsernameFromTg } from '@/utils'
 import { Link } from 'react-router-dom'
 import { FaThumbsUp } from 'react-icons/fa6'
+import { UserFilter } from '@/components/pages/users'
+import { UserFilterType } from '@/types'
+import { useState } from 'react'
 
 export const Users = () => {
+  const [filter] = useState<UserFilterType>({
+    tg: '',
+    role: 'developer',
+    filter_by: 'thumb-up',
+  })
+
+  const handleFilter = (key: string, value: string) => {
+    console.log('filter:', key, value)
+  }
+
   return (
     <div className="w-full mx-auto p-4 h-app bg-black">
+      <div className="w-full flex mb-4">
+        <UserFilter filter={filter} handleFilter={handleFilter} />
+      </div>
       <ul className="flex flex-col">
         {USERS.map((user) => (
           <Link to={`/users/${getUsernameFromTg(user.tg)}`}>
@@ -30,8 +46,12 @@ export const Users = () => {
                   <h5>{user.rate?.thumb_up || 0}</h5>
                 </div>
                 {user.rate?.label && (
-                  <div className={`label flex items-center gap-1 text-white py-1 px-3 rounded-lg`}>
-                    <h5 className='text-black font-bold text-sm uppercase'>{user.rate.label}</h5>
+                  <div
+                    className={`label flex items-center gap-1 text-white py-1 px-3 rounded-lg`}
+                  >
+                    <h5 className="text-black font-bold text-sm uppercase">
+                      {user.rate.label}
+                    </h5>
                   </div>
                 )}
               </div>
